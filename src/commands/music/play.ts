@@ -3,7 +3,7 @@ import { GuildMember, VoiceChannel } from 'discord.js';
 import { createEmbed, isVoiceChannel } from '../../utils/helpers';
 import { musicManager } from '../../utils/music';
 import { COLORS, EMOJIS } from '../../utils/constants';
-import { search } from 'play-dl';
+import * as play from 'play-dl';
 import ytdl from 'ytdl-core';
 
 export class PlayCommand extends Command {
