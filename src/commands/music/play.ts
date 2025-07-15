@@ -109,7 +109,7 @@ export class PlayCommand extends Command {
       const track = {
         title: songInfo.videoDetails.title,
         url: isUrl ? query : songInfo.videoDetails.video_url,
-        duration: this.formatDuration(songInfo.videoDetails.lengthSeconds * 1000),
+        duration: this.formatDuration((songInfo.videoDetails.lengthSeconds || 0) * 1000),
         thumbnail: songInfo.videoDetails.thumbnails?.[0]?.url || '',
         requestedBy: interaction.user.id,
         requestedAt: new Date()
