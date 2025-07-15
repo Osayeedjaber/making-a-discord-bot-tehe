@@ -31,7 +31,7 @@ export class PingCommand extends Command {
     const apiLatency = Math.round(this.container.client.ws.ping);
 
     let latencyColor: keyof typeof COLORS = 'SUCCESS';
-    let latencyEmoji = EMOJIS.SUCCESS;
+    let latencyEmoji: string = EMOJIS.SUCCESS;
 
     if (timeDiff > 200 || apiLatency > 200) {
       latencyColor = 'ERROR';
