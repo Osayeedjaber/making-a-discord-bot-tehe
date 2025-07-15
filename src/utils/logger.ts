@@ -22,7 +22,7 @@ const logFormat = format.printf(({ level, message, timestamp, ...meta }) => {
   }
   
   const metaString = Object.keys(meta).length ? ` ${JSON.stringify(meta)}` : '';
-  return `${magenta(timestamp)} [${coloredLevel}] ${message}${metaString}`;
+  return `${magenta(timestamp)} [${coloredLevel}] ${String(message)}${metaString}`;
 });
 
 export const logger = createLogger({
