@@ -80,7 +80,7 @@ export class PlayCommand extends Command {
         isUrl = true;
       } else {
         // Search query
-        const searchResults = await search(query, {
+        const searchResults = await play.search(query, {
           limit: 1,
           source: { youtube: 'video' }
         });
