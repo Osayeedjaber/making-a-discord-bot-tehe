@@ -12,7 +12,7 @@ import { VoiceChannel, Guild } from 'discord.js';
 import { MusicQueue, IMusicTrack } from '../models/MusicQueue';
 import { logger } from './logger';
 import ytdl from 'ytdl-core';
-import { play } from 'play-dl';
+import * as play from 'play-dl';
 
 export class MusicManager {
   private connections: Map<string, VoiceConnection> = new Map();
