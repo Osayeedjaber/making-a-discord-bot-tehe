@@ -31,7 +31,7 @@ const client = new SapphireClient({
     Partials.GuildMember
   ],
   logger: {
-    level: process.env.NODE_ENV === 'development' ? 'debug' : 'info'
+    level: (process.env.NODE_ENV === 'development' ? 'debug' : 'info') as any
   },
   loadMessageCommandListeners: true,
   loadDefaultErrorListeners: true,
