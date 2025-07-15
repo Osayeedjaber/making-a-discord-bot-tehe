@@ -23,7 +23,7 @@ export class MusicManager {
     const connection = joinVoiceChannel({
       channelId: voiceChannel.id,
       guildId: voiceChannel.guild.id,
-      adapterCreator: voiceChannel.guild.voiceAdapterCreator,
+      adapterCreator: voiceChannel.guild.voiceAdapterCreator as any,
     });
 
     this.connections.set(voiceChannel.guild.id, connection);
